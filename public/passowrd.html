@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #gif-container img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="message" style="color: green; font-size: 20px;">Correct password! Welcome!</p>
+    <div id="gif-container"></div>
+
+    <script>
+        const successGifs = [
+            "https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif",
+            "https://media.giphy.com/media/l41lFw057lAJQMwg0/giphy.gif",
+            "https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif",
+            "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif"
+        ];
+
+        function showRandomGif() {
+            const gifContainer = document.getElementById("gif-container");
+            const randomGif = successGifs[Math.floor(Math.random() * successGifs.length)];
+            gifContainer.innerHTML = `<img src="${randomGif}" alt="Happy GIF">`;
+        }
+
+        showRandomGif();
+    </script>
+</body>
+</html>
